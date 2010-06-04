@@ -2,7 +2,7 @@ QT += opengl
 DEFINES += LINUX
 TEMPLATE = lib
 CONFIG += staticlib
-DESTDIR=/home/fliu/bipedCon/release/src/libs
+DESTDIR=../../../libs
 HEADERS += ../../GLCamera.h \
     ../../GLMesh.h \
     ../../GLTexture.h \
@@ -14,4 +14,4 @@ SOURCES += ../../GLCamera.cpp \
     ../../GLUtils.cpp \
     ../../OBJReader.cpp
 
-INCLUDEPATH +=/home/fliu/bipedCon/release/src/
+INCLUDEPATH +=../../../

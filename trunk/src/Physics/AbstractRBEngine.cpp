@@ -26,6 +26,8 @@
 #include <Utils/Utils.h>
 
 
+#include <stdio.h>
+#include <stdlib.h>
 
 
 AbstractRBEngine::AbstractRBEngine(void){
@@ -116,6 +118,10 @@ void AbstractRBEngine::loadRBsFromFile(char* fName){
 		if (strlen(buffer)>195)
 			throwError("The input file contains a line that is longer than ~200 characters - not allowed");
 		char *line = lTrim(buffer);
+                printf(" the line is : %s\n",line);
+                fflush(stdout);
+
+
 		int lineType = getRBLineType(line);
 		switch (lineType) {
 			case RB_RB:
@@ -126,6 +132,8 @@ void AbstractRBEngine::loadRBsFromFile(char* fName){
 				break;
 			case RB_ARB:
 				//create a new articulated rigid body and have it load its own info...
+                                printf("reading rigidebody \n");
+                                fflush(stdout);
 				newBody = new ArticulatedRigidBody();
 				newBody->loadFromFile(f);
 				objects.push_back(newBody);
