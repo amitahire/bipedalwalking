@@ -10,6 +10,6 @@ SOURCES += ../../BMPIO.cpp \
     ../../ImageIO.cpp \
     ../../Timer.cpp \
     ../../Utils.cpp
-DESTDIR=/home/fliu/bipedCon/release/src/libs
-INCLUDEPATH +=/home/fliu/bipedCon/release/src/
-INCLUDEPATH +=/home/fliu/bipedCon/release/src/include
+DESTDIR=../../../libs
+INCLUDEPATH +=../../../
+INCLUDEPATH +=../../../include

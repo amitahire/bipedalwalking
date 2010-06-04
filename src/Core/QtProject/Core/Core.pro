@@ -25,7 +25,7 @@ SOURCES += ../../BalanceFeedback.cpp \
     ../../Trajectory.cpp
 
 DEFINES+=dDOUBLE
-DESTDIR=/home/fliu/bipedCon/release/src/libs
+DESTDIR=../../../libs
 
-INCLUDEPATH +=/home/fliu/bipedCon/release/src/
-INCLUDEPATH +=/home/fliu/bipedCon/release/src/ode-0.9/include
+INCLUDEPATH +=../../../
+INCLUDEPATH +=../../../ode-0.9/include

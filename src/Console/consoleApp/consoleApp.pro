@@ -2,17 +2,18 @@ QT += opengl
 QT -= core \
     gui
 CONFIG -= app_bundle
-
-SOURCES += ../main.cpp
-INCLUDEPATH +=../../
+SOURCES += ../main.cpp \
+    ../simengine.cpp
+INCLUDEPATH += ../../
 CONFIG += console
-DEFINES+=dDOUBLE
-LIBS +=-L../../libs
+DEFINES += dDOUBLE
+LIBS += -L../../libs
 LIBS += -lPhysicsSim
 LIBS += -lmathlib
-LIBS +=-lgsl
-LIBS +=-lode
-LIBS +=-lglUtl
-LIBS +=-lCore
-LIBS+=-lUtility
-LIBS+=-lgslcblas
+LIBS += -lgsl
+LIBS += -lode
+LIBS += -lglUtl
+LIBS += -lCore
+LIBS += -lUtility
+LIBS += -lgslcblas
+HEADERS += ../simengine.h
