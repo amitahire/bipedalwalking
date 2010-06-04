@@ -36,6 +36,6 @@ void SimEngine::Initilize()
 }
 void SimEngine::Paint()
 {
-    SimEngine::world->drawRBs(0);
+    SimEngine::world->drawRBs(SHOW_MESH|SHOW_JOINTS);
 
 }
