@@ -1,6 +1,6 @@
 #ifndef SIMENGINE_H
 #define SIMENGINE_H
-
+class AbstractRBEngine;
 class SimEngine
 {
 public:

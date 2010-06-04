@@ -4,6 +4,7 @@
 #include "ngl/NGLInit.h"
 #include "ngl/Vector.h"
 #include "ngl/VBOPrimitives.h"
+#include <Console/simengine.h>
 
 
 GLWindow::GLWindow(QWidget *_parent):QGLWidget(_parent)
@@ -49,6 +50,9 @@ glLightfv(GL_LIGHT0,GL_POSITION,pos);
 
 glEnable(GL_COLOR_MATERIAL);
 glColorMaterial(GL_FRONT_AND_BACK,GL_AMBIENT_AND_DIFFUSE);
+
+
+SimEngine::Initilize();
 }
 void GLWindow::resizeGL(int _w, int  _h)
 {
@@ -68,7 +72,7 @@ void GLWindow::paintGL()
                 glRotatef(m_zRot,0,0,1);
                 glPushMatrix();
 
-
+                    /*
                     m_colour.Use();
                     glScalef(m_scale,m_scale,m_scale);
                     ngl::VBOPrimitives *prim=ngl::VBOPrimitives::Instance();
@@ -86,6 +90,11 @@ void GLWindow::paintGL()
                         case 1:{prim->DrawVBO("sphere");break;}
                         case 2:{prim->DrawVBO("cube");break;}
                     }
+                    */
+
+                std::cout<<"paint the rigid body"<<std::endl;
+                SimEngine::Paint();
+
                 glPopMatrix();
          glPopMatrix();
 
