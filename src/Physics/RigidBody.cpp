@@ -222,12 +222,20 @@ void RigidBody::loadFromFile(FILE* f){
 		if (strlen(buffer)>195)
 			throwError("The input file contains a line that is longer than ~200 characters - not allowed");
 		char *line = lTrim(buffer);
-		int lineType = getRBLineType(line);
+                printf(" the line is : %s\n",line);
+                fflush(stdout);
+                int lineType = getRBLineType(line);
+
+
 		switch (lineType) {
 			case RB_NAME:
+                                printf("reading the name");
+                                fflush(stdout);
 				sscanf(line, "%s", this->name);
 				break;
 			case RB_MESH_NAME:
+                                printf("reading the mesh");
+                                fflush(stdout);
 				sscanf(line, "%s", meshName);
 				tmpMesh = OBJReader::loadOBJFile(meshName);
 				tmpMesh->computeNormals();

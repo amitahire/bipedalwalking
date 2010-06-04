@@ -2,7 +2,7 @@ DEFINES += LINUX
 TEMPLATE = lib
 CONFIG += staticlib
 DEFINES+=dDOUBLE
-DESTDIR=/home/fliu/bipedCon/release/src/libs
+DESTDIR=../../../libs
 HEADERS += ../../AbstractRBEngine.h \
     ../../ArticulatedFigure.h \
     ../../ArticulatedRigidBody.h \
@@ -40,5 +40,5 @@ SOURCES += ../../AbstractRBEngine.cpp \
     ../../RigidBody.cpp \
     ../../SphereCDP.cpp \
     ../../UniversalJoint.cpp
-INCLUDEPATH +=/home/fliu/bipedCon/release/src/
+INCLUDEPATH +=../../../
 

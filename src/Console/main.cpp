@@ -2,7 +2,7 @@
 #include<Physics/ArticulatedFigure.h>
 #include<Physics/ODEWorld.h>
 #include<iostream>
-
+#include <GLUtils/OBJReader.h>
 #include <stdio.h>
 #include <stdlib.h>
 int main()
@@ -20,23 +20,18 @@ int main()
     fflush(stdout);
 
     char buffer[256];
-    FILE* fp=fopen("/home/fliu/bipedCon/release/src/data/characters","r");
-    while(!feof(fp))
-    {
-        fgets(buffer,256,fp);
-        char*line=lTrim(buffer);
-        printf(" the line is : %s\n",line);
-        fflush(stdout);
 
 
-    }
 
-   // world->loadRBsFromFile("/home/fliu/bipedCon/release/src/data/characters");
+     std::cout<<"reading characters"<<std::endl;
+     //OBJReader::loadOBJFile("../data/models/bigBird/torso.obj");
+
+    world->loadRBsFromFile("../data/characters/bigBird.rbs");
 
     std::cout<<"reading characters"<<std::endl;
-   // world->drawRBs(0);
+    world->drawRBs(0);
   //  af->loadFromFile(fp,world);
 
-    return 1;
+    return 0;
 }
 

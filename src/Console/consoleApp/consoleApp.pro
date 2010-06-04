@@ -4,10 +4,10 @@ QT -= core \
 CONFIG -= app_bundle
 
 SOURCES += ../main.cpp
-INCLUDEPATH +=/home/fliu/bipedCon/release/src/
+INCLUDEPATH +=../../
 CONFIG += console
 DEFINES+=dDOUBLE
-LIBS +=-L/home/fliu/bipedCon/release/src/libs
+LIBS +=-L../../libs
 LIBS += -lPhysicsSim
 LIBS += -lmathlib
 LIBS +=-lgsl
