@@ -1,7 +1,7 @@
 DEFINES += LINUX
 TEMPLATE = lib
 CONFIG += staticlib
-DESTDIR=/home/fliu/bipedCon/release/src/libs
+DESTDIR=../../../libs
 
 HEADERS += ../../Matrix.h \
     ../../Plane.h \
@@ -24,4 +24,4 @@ SOURCES += ../../Matrix.cpp \
     ../../Vector.cpp \
     ../../Vector3d.cpp \
     ../../Capsule.cpp
-INCLUDEPATH +=/home/fliu/bipedCon/release/src/
+INCLUDEPATH +=../../../
